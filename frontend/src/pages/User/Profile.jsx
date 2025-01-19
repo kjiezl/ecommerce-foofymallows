@@ -44,46 +44,46 @@ const Profile = () => {
     <div className="container mx-auto p-4 mt-[10rem]">
         <div className="flex justify-center align-center md:flex md: space-x-4">
             <div className="md:w-1/3">
-                <h2 className="text-2xl font-semibold mb-8">
+                <h2 className="text-2xl font-bold mb-10 text-center">
                     Update Profile
                 </h2>
 
                 <form onSubmit={submitHandler}>
                     <div className="mb-4">
-                        <label className="block font-medium text-black">Name</label>
+                        <label className="block font-medium text-white">Name</label>
                         <input 
                             type="text" 
                             placeholder="John Doe"
                             value={username} 
                             onChange={(e) => setUsername(e.target.value)} 
-                            className="form-input mt-1 p-4 border border-b-slate-400 rounded-small w-full shadow-xl" />
+                            className="rounded bg-black text-white form-input mt-1 p-4 border border-b-slate-400 rounded-small w-full shadow-xl" />
                     </div>
                     <div className="mb-4">
-                        <label className="block font-medium text-black">Email</label>
+                        <label className="block font-medium text-white">Email</label>
                         <input 
                             type="email" 
                             placeholder="example@email.com"
                             value={email} 
                             onChange={(e) => setEmail(e.target.value)} 
-                            className="form-input mt-1 p-4 border border-b-slate-400 rounded-small w-full shadow-xl" />
+                            className="rounded bg-black text-white form-input mt-1 p-4 border border-b-slate-400 rounded-small w-full shadow-xl" />
                     </div>
                     <div className="mb-4">
-                        <label className="block font-medium text-black">Password</label>
+                        <label className="block font-medium text-white">Password</label>
                         <input 
                             type="password" 
                             placeholder="********"
                             value={password} 
                             onChange={(e) => setPassword(e.target.value)} 
-                            className="form-input mt-1 p-4 border border-b-slate-400 rounded-small w-full shadow-xl" />
+                            className="rounded bg-black text-white form-input mt-1 p-4 border border-b-slate-400 rounded-small w-full shadow-xl" />
                     </div>
                     <div className="mb-4">
-                        <label className="block font-medium text-black">Confirm Password</label>
+                        <label className="block font-medium text-white">Confirm Password</label>
                         <input 
                             type="password" 
                             placeholder="********"
                             value={confirmPassword} 
                             onChange={(e) => setConfirmPassword(e.target.value)} 
-                            className="form-input mt-1 p-4 border border-b-slate-400 rounded-small w-full shadow-xl" />
+                            className="rounded bg-black text-white form-input mt-1 p-4 border border-b-slate-400 rounded-small w-full shadow-xl" />
                     </div>
 
                     <div className="flex justify-between">

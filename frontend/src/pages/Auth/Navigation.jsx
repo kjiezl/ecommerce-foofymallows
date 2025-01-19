@@ -100,6 +100,7 @@ const Navigation = () => {
                         <>
                             <li>
                                 <Link 
+                                    onClick={toggleDropdown}
                                     to='/admin/dashboard' 
                                     className='block px-4 py-2 hover:bg-gray-900'>
                                     Dashboard
@@ -107,6 +108,7 @@ const Navigation = () => {
                             </li>
                             <li>
                                 <Link 
+                                    onClick={toggleDropdown}
                                     to='/admin/productlist' 
                                     className='block px-4 py-2 hover:bg-gray-900'>
                                     Products
@@ -114,6 +116,7 @@ const Navigation = () => {
                             </li>
                             <li>
                                 <Link 
+                                    onClick={toggleDropdown}
                                     to='/admin/categorylist' 
                                     className='block px-4 py-2 hover:bg-gray-900'>
                                     Category
@@ -121,6 +124,7 @@ const Navigation = () => {
                             </li>
                             <li>
                                 <Link 
+                                    onClick={toggleDropdown}
                                     to='/admin/orderlist' 
                                     className='block px-4 py-2 hover:bg-gray-900'>
                                     Orders
@@ -128,6 +132,7 @@ const Navigation = () => {
                             </li>
                             <li>
                                 <Link 
+                                    onClick={toggleDropdown}
                                     to='/admin/userlist' 
                                     className='block px-4 py-2 hover:bg-gray-900'>
                                     Users

@@ -49,18 +49,18 @@ const Register = () => {
 
     return <section className="pl-[10rem] flex flex-wrap">
             <div className="mr-[4rem] mt-[5rem]">
-                <h1 className="text-2xl font-semibold mb-4">Sign Up</h1>
+                <h1 className="text-3xl font-bold mb-4">Sign Up</h1>
 
                 <form onSubmit={submitHandler} className="container w-[40rem]">
                     <div className="my-[2rem] mt-[4rem]">
                         <label htmlFor="name"
-                            className="block text-sm font-medium text-black">
+                            className="block text-sm font-medium text-white">
                                 Name
                         </label>
                         <input
                             type="text"
                             id="name"
-                            className="mt-1 p-2 border border-b-slate-400 rounded w-full shadow-xl sm:text-sm"
+                            className="mt-1 p-2 border bg-black text-white border-b-slate-400 rounded w-full shadow-xl sm:text-sm"
                             placeholder="John Doe"
                             value={username}
                             required
@@ -69,13 +69,13 @@ const Register = () => {
                     </div>
                     <div className="my-[2rem]">
                         <label htmlFor="email"
-                            className="block text-sm font-medium text-black">
+                            className="block text-sm font-medium text-white">
                                 Email Address
                         </label>
                         <input
                             type="email"
                             id="email"
-                            className="mt-1 p-2 border border-b-slate-400 rounded w-full shadow-xl sm:text-sm"
+                            className="mt-1 p-2 border bg-black text-white border-b-slate-400 rounded w-full shadow-xl sm:text-sm"
                             placeholder="example@email.com"
                             value={email}
                             required
@@ -84,13 +84,13 @@ const Register = () => {
                     </div>
                     <div className="my-[2rem]">
                         <label htmlFor="password"
-                            className="block text-sm font-medium text-black">
+                            className="block text-sm font-medium text-white">
                                 Password
                         </label>
                         <input
                             type="password"
                             id="password"
-                            className="mt-1 p-2 border border-b-slate-400 rounded w-full shadow-xl sm:text-sm"
+                            className="mt-1 p-2 border bg-black text-white border-b-slate-400 rounded w-full shadow-xl sm:text-sm"
                             placeholder="********"
                             value={password}
                             required
@@ -99,13 +99,13 @@ const Register = () => {
                     </div>
                     <div className="my-[2rem]">
                         <label htmlFor="confirmPassword"
-                            className="block text-sm font-medium text-black">
+                            className="block text-sm font-medium text-white">
                                 Confirm Password
                         </label>
                         <input
                             type="password"
                             id="confirmPassword"
-                            className="mt-1 p-2 border border-b-slate-400 rounded w-full shadow-xl sm:text-sm"
+                            className="mt-1 p-2 border bg-black text-white border-b-slate-400 rounded w-full shadow-xl sm:text-sm"
                             placeholder="********"
                             value={confirmPassword}
                             required
@@ -116,7 +116,7 @@ const Register = () => {
                     <button 
                         disabled={isLoading} 
                         type="submit"
-                        className="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600 cursor-pointer my-[1rem] transition-transform transform hover:scale-105">
+                        className="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600 cursor-pointer mt-[1rem] transition-transform transform hover:scale-105">
                         {isLoading ? 'Creating account...' : 'Submit'}
                     </button>
 

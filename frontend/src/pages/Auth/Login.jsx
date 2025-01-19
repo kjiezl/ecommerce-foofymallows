@@ -40,30 +40,31 @@ const Login = () => {
     return <div>
         <section className="pl-[10rem] flex flex-wrap">
             <div className="mr-[4rem] mt-[5rem]">
-                <h1 className="text-2xl font-semibold mb-4">Log in</h1>
+                <h1 className="text-3xl font-bold mb-4">Welcome!</h1>
 
                 <form onSubmit={submitHandler} className="container w-[40rem]">
                     <div className="my-[2rem] mt-[4rem]">
-                        <label htmlFor="email" className="block text-sm font-medium text-black">
+                        <label htmlFor="email" className="block text-sm font-medium text-white">
                             Email Address</label>
                         <input 
                             type="email" 
                             id="email" 
                             required
-                            className="mt-1 p-2 border border-b-slate-400 rounded w-full shadow-xl sm:text-sm" 
+                            // className="mt-1 p-2 border border-b-slate-400 rounded w-full shadow-xl sm:text-sm" 
+                            className="mt-1 p-2 bg-black text-white border border-b-slate-400 rounded w-full sm:text-sm" 
                             placeholder="example@email.com"
                             value={email} 
                             onChange={(e) => setEmail(e.target.value)} />
                     </div>
                     <div className="mb-4">
-                        <label htmlFor="password" className="block text-sm font-medium text-black">
+                        <label htmlFor="password" className="block text-sm font-medium text-white">
                             Password</label>
                         <input 
                             type="password" 
                             id="password" 
                             required
                             placeholder="********" 
-                            className="mt-1 p-2 border border-b-slate-400 rounded w-full shadow-sm sm:text-sm" 
+                            className="mt-1 p-2 border bg-black text-white border-b-slate-400 rounded w-full sm:text-sm" 
                             value={password} 
                             onChange={(e) => setPassword(e.target.value)} />
                     </div>
@@ -71,8 +72,8 @@ const Login = () => {
                     <button 
                         disabled={isLoading} 
                         type="submit"
-                        className="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600 cursor-pointer my-[1rem] transition-transform transform hover:scale-105">
-                        {isLoading ? 'Signing in...' : 'Sign in'}
+                        className="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600 cursor-pointer mt-[1rem] transition-transform transform hover:scale-105">
+                        {isLoading ? 'Logging in...' : 'Log in'}
                     </button>
 
                     {isLoading && <Loader />}
