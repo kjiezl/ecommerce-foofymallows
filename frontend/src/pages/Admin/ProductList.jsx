@@ -7,6 +7,7 @@ import {
 import { useFetchCategoriesQuery } from '../../redux/api/categoryApiSlice';
 import { toast } from 'react-toastify';
 import { set } from 'mongoose';
+import AdminMenu from './AdminMenu';
 
 const ProductList = () => {
     const [image, setImage] = useState("");
@@ -41,14 +42,15 @@ const ProductList = () => {
             const { data } = await createProduct(productData);
       
             if (data.error) {
-              toast.error("Product creation failed");
+                console.error(data.error);
+                toast.error("Product creation failed");
             } else {
-              toast.success(`${data.name} is created`);
-              navigate("/");
+                toast.success(`${data.name} is created`);
+                navigate("/");
             }
           } catch (error) {
-            console.error(error);
-            toast.error("Product creation failed");
+                console.error(error);
+                toast.error("Product creation failed");
           }
     };
 
@@ -69,6 +71,7 @@ const ProductList = () => {
   return (
     <div className='container xl:mx-[9rem] sm:mx-[0]'>
         <div className="flex flex-col md:flex-row">
+            <AdminMenu />
             <div className="md:w-3/4 p-3">
                 <div className="h-12 font-bold *:text-white text-2xl my-5">Create Product</div>
                 {imageUrl && (
