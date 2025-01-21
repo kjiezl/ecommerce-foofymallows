@@ -7,8 +7,8 @@ const Modal = ({isOpen, onClose, children}) => {
                 <div className="absolute top-[40%] right-[50%] bg-black p-4 rounded-lg z-10 text-right">
                     <button
                         onClick={onClose} 
-                        className="text-black font-semibold hover:text-gray-700 focus:outline-none mr-2">
-                        X
+                        className="text-gray-600 text-lg font-bold hover:text-gray-400 transition-transform hover:scale-105 mr-2">
+                        x
                     </button>
                     {children}
                 </div>
