@@ -106,8 +106,8 @@ const fetchAllProducts = asyncHandler(async (req, res) => {
     try{
         const products = await Product.find({})
             .populate('category')
-            .limit(12)
-            .sort({ createdAt: -1 });
+            .limit(50)
+            .sort({ createdAt: 1 });
         
         res.json(products);
 
@@ -127,7 +127,7 @@ const addProductReview = asyncHandler(async (req, res) => {
 
             if(alreadyReviewed){
                 res.status(400);
-                throw new Error("Product already reviewed");
+                throw new Error("You already reviewed this product");
             }
 
             const review = {

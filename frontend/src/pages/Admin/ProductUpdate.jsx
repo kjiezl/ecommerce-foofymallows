@@ -106,7 +106,7 @@ const ProductUpdate = () => {
         <div className="flex flex-col md:flex-row">
             <AdminMenu />
             <div className="md:w-3/4 p-3">
-                <div className="h-12 font-bold *:text-white text-3xl my-5">Update Product</div>
+                <div className="h-12 font-bold text-pink-800 text-3xl my-5">Update Product</div>
                 {image && (
                     <div className="text-center mb-4">
                         <img 
@@ -116,7 +116,7 @@ const ProductUpdate = () => {
                     </div>
                 )}
                 <div className="mb-3">
-                    <label className='border text-white px-4 block w-full text-center rounded-lg cursor-pointer font-bold py-11'>
+                    <label className='border text-pink-800 px-4 block w-full text-center rounded-lg cursor-pointer font-bold py-11 shadow-xl'>
                         {image ? image.name: "Upload Image: "}
                         <input
                             type='file'
@@ -133,7 +133,7 @@ const ProductUpdate = () => {
                             <label htmlFor='name' className='mt-4'>Name</label> <br />
                             <input 
                                 type='text' 
-                                className='mt-4 p-4 mb-3 w-[30rem] border rounded-lg bg-[#101011] text-white' 
+                                className='mt-4 p-4 mb-3 w-[30rem] border rounded-lg bg-white text-slate-800' 
                                 value={name}
                                 onChange={e => setName(e.target.value)}></input>
                         </div>
@@ -141,7 +141,7 @@ const ProductUpdate = () => {
                             <label htmlFor='name block' className='mt-4'>Price</label> <br />
                             <input 
                                 type='number' 
-                                className='mt-4 p-4 mb-3 w-[30rem] border rounded-lg bg-[#101011] text-white' 
+                                className='mt-4 p-4 mb-3 w-[30rem] border rounded-lg bg-white text-slate-800' 
                                 value={price}
                                 onChange={e => setPrice(e.target.value)}></input>
                         </div>
@@ -151,7 +151,7 @@ const ProductUpdate = () => {
                             <label htmlFor='name block' className='mt-4'>Quantity</label> <br />
                             <input 
                                 type='number' 
-                                className='mt-4 p-4 mb-3 w-[30rem] border rounded-lg bg-[#101011] text-white' 
+                                className='mt-4 p-4 mb-3 w-[30rem] border rounded-lg bg-white text-slate-800' 
                                 value={quantity}
                                 onChange={e => setQuantity(e.target.value)}></input>
                         </div>
@@ -159,7 +159,7 @@ const ProductUpdate = () => {
                             <label htmlFor='name block' className='mt-4'>Brand</label> <br />
                             <input 
                                 type='text' 
-                                className='mt-4 p-4 mb-3 w-[30rem] border rounded-lg bg-[#101011] text-white' 
+                                className='mt-4 p-4 mb-3 w-[30rem] border rounded-lg bg-white text-slate-800' 
                                 value={brand}
                                 onChange={e => setBrand(e.target.value)}></input>
                         </div>
@@ -168,7 +168,7 @@ const ProductUpdate = () => {
                     <label className='my-5'>Description</label>
                     <textarea
                         type="text"
-                        className='mt-4 p-2 mb-3 bg-[#101011] border rounded-lg w-full text-white'
+                        className='mt-4 p-2 mb-3 bg-white border rounded-lg w-full text-slate-800'
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}>
                     </textarea>
@@ -178,7 +178,7 @@ const ProductUpdate = () => {
                             <label htmlFor='name block'>Count in Stock</label> <br />
                             <input 
                                 type='text'
-                                className='mt-4 p-4 mb-3 w-[30rem] border rounded-lg bg-[#101011] text-white'
+                                className='mt-4 p-4 mb-3 w-[30rem] border rounded-lg bg-white text-slate-800'
                                 value={stock}
                                 onChange={e => setStock(e.target.value)}
                                 >
@@ -189,7 +189,7 @@ const ProductUpdate = () => {
                             <label htmlFor=''>Category</label> <br />
                             <select 
                                 placeholder='Select Category'
-                                className='mt-4 p-4 mb-3 w-[30rem] border rounded-lg bg-[#101011] text-white'
+                                className='mt-4 p-4 mb-3 w-[30rem] border rounded-lg bg-white text-slate-800'
                                 onChange={e => setCategory(e.target.value)}>
                                     {categories?.map((category) => (
                                         <option 
@@ -204,12 +204,12 @@ const ProductUpdate = () => {
                     <div>
                         <button 
                             onClick={handleSubmit}
-                            className='py-4 px-10 mt-5 rounded-lg text-lg font-bold bg-green-600 mr-6'>
+                            className='py-4 px-10 mt-5 rounded-lg text-lg font-bold bg-green-700 mr-6 text-white hover:scale-110 transition-transform hover:brightness-125'>
                                 Update
                         </button>
                         <button 
                             onClick={handleDelete}
-                            className='py-4 px-10 mt-5 rounded-lg text-lg font-bold bg-red-600'>
+                            className='py-4 px-10 mt-5 rounded-lg text-lg font-bold bg-red-700 text-white hover:scale-110 transition-transform hover:brightness-125'>
                                 Delete
                         </button>
                     </div>

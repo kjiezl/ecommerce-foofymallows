@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 body {
-    background: #0f0f10;
-    color: #fff;
+    /* background: #0f0f10; */
+    background: #ffffff;
+    color: #a1114d;
+    font-family: "Nunito", serif;
 }
 
 input, textarea {

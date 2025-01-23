@@ -54,13 +54,13 @@ const Register = () => {
                 <form onSubmit={submitHandler} className="container w-[40rem]">
                     <div className="my-[2rem] mt-[4rem]">
                         <label htmlFor="name"
-                            className="block text-sm font-medium text-white">
+                            className="block text-sm font-medium text-slate-900">
                                 Name
                         </label>
                         <input
                             type="text"
                             id="name"
-                            className="mt-1 p-2 border bg-black text-white border-b-slate-400 rounded w-full shadow-xl sm:text-sm"
+                            className="mt-1 p-2 border bg-white text-slate-800 border-b-slate-400 rounded w-full shadow-xl sm:text-sm"
                             placeholder="John Doe"
                             value={username}
                             required
@@ -69,13 +69,13 @@ const Register = () => {
                     </div>
                     <div className="my-[2rem]">
                         <label htmlFor="email"
-                            className="block text-sm font-medium text-white">
+                            className="block text-sm font-medium text-slate-900">
                                 Email Address
                         </label>
                         <input
                             type="email"
                             id="email"
-                            className="mt-1 p-2 border bg-black text-white border-b-slate-400 rounded w-full shadow-xl sm:text-sm"
+                            className="mt-1 p-2 border bg-white text-slate-800 border-b-slate-400 rounded w-full shadow-xl sm:text-sm"
                             placeholder="example@email.com"
                             value={email}
                             required
@@ -84,13 +84,13 @@ const Register = () => {
                     </div>
                     <div className="my-[2rem]">
                         <label htmlFor="password"
-                            className="block text-sm font-medium text-white">
+                            className="block text-sm font-medium text-slate-900">
                                 Password
                         </label>
                         <input
                             type="password"
                             id="password"
-                            className="mt-1 p-2 border bg-black text-white border-b-slate-400 rounded w-full shadow-xl sm:text-sm"
+                            className="mt-1 p-2 border bg-white text-slate-800 border-b-slate-400 rounded w-full shadow-xl sm:text-sm"
                             placeholder="********"
                             value={password}
                             required
@@ -99,13 +99,13 @@ const Register = () => {
                     </div>
                     <div className="my-[2rem]">
                         <label htmlFor="confirmPassword"
-                            className="block text-sm font-medium text-white">
+                            className="block text-sm font-medium text-slate-900">
                                 Confirm Password
                         </label>
                         <input
                             type="password"
                             id="confirmPassword"
-                            className="mt-1 p-2 border bg-black text-white border-b-slate-400 rounded w-full shadow-xl sm:text-sm"
+                            className="mt-1 p-2 border bg-white text-slate-800 border-b-slate-400 rounded w-full shadow-xl sm:text-sm"
                             placeholder="********"
                             value={confirmPassword}
                             required

@@ -64,11 +64,11 @@ const UserList = () => {
             <table className="w-full md:w-4/5 mx-auto">
                 <thead>
                     <tr>
-                        <th className="bg-gray-900 px-4 p-2 text-left">ID</th>
-                        <th className="bg-gray-900 px-4 p-2 text-left">NAME</th>
-                        <th className="bg-gray-900 px-4 p-2 text-left">EMAIL</th>
-                        <th className="bg-gray-900 px-4 p-2 text-left">ADMIN</th>
-                        <th className="bg-gray-900 px-4 p-2 text-left"></th>
+                        <th className="bg-gray-300 px-4 p-2 text-left">ID</th>
+                        <th className="bg-gray-300 px-4 p-2 text-left">NAME</th>
+                        <th className="bg-gray-300 px-4 p-2 text-left">EMAIL</th>
+                        <th className="bg-gray-300 px-4 p-2 text-left">ADMIN</th>
+                        <th className="bg-gray-300 px-4 p-2 text-left"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -82,9 +82,9 @@ const UserList = () => {
                                             type="text"
                                             value={editableName}
                                             onChange={(e) => setEditableName(e.target.value)}
-                                            className="w-full p-2 border rounded-lg bg-black text-white"/>
+                                            className="w-full p-2 border rounded-lg bg-white text-slate-800"/>
                                             <button onClick={() => updateHandler(user._id)}
-                                                className="ml-2 bg-blue-500 py-2 px-4 rounded-lg text-white">
+                                                className="ml-2 bg-blue-500 py-2 px-4 rounded-lg text-white hover:scale-105 transition-transform">
                                                 <FaCheck />
                                             </button>
                                     </div>
@@ -104,9 +104,9 @@ const UserList = () => {
                                             type="text"
                                             value={editableEmail}
                                             onChange={(e) => setEditableEmail(e.target.value)}
-                                            className="w-full p-2 border rounded-lg bg-black text-white"/>
+                                            className="w-full p-2 border rounded-lg bg-white text-slate-800"/>
                                             <button onClick={() => updateHandler(user._id)}
-                                                className="ml-2 bg-blue-500 py-2 px-4 rounded-lg text-white">
+                                                className="ml-2 bg-blue-500 py-2 px-4 rounded-lg text-white hover:scale-105 transition-transform">
                                                 <FaCheck />
                                             </button>
                                     </div>

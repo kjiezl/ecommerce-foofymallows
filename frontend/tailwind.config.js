@@ -8,7 +8,12 @@ export default {
     flowbite.content(),
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        nunito: ["Nunito", "serif"],
+        varela: ["Varela Round", "serif"],
+      }
+    },
   },
   plugins: [flowbite.plugin()],
 }
