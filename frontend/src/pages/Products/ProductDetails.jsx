@@ -101,7 +101,7 @@ const ProductDetails = () => {
                         <div className="two">
                             <h1 className="flex items-center mb-6 w-[20rem]">
                                 <FaStar className="mr-2 text-pink-700"/> Ratings: {" "}
-                                {product.rating}
+                                {Math.round(product.rating * 100) / 100}
                             </h1>
                             <h1 className="flex items-center mb-6 w-[20rem]">
                                 <FaShoppingCart className="mr-2 text-pink-700"/> Quantity: {" "}
