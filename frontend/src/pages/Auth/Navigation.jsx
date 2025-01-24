@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { AiOutlineHome, AiOutlineShopping, AiOutlineLogin, AiOutlineUserAdd, AiOutlineShoppingCart} from 'react-icons/ai'
-import { FaHeart } from 'react-icons/fa'
+import { FaRegHeart } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import './Navigation.css'
@@ -11,6 +11,8 @@ import FavoritesCount from '../Products/FavoritesCount'
 
 const Navigation = () => {
     const {userInfo} = useSelector(state => state.auth);
+    const {cartItems} = useSelector(state => state.cart);
+
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [showSidebar, setShowSidebar] = useState(false);
 
@@ -19,7 +21,7 @@ const Navigation = () => {
     }
 
     const toggleSidebar = () => {
-        setSidebar(!showSidebar);
+        setShowSidebar(!showSidebar);
     }
 
     const closeSidebar = () => {
@@ -64,11 +66,20 @@ const Navigation = () => {
                     className='flex items-center transition-transform transform hover:translate-x-2'>
                     <AiOutlineShoppingCart className='mr-2 mt-[3rem]' size={26} />
                     <span className='hidden nav-item-name mt-[3rem]'>Cart</span> {" "}
+                    <div className="absolute left-4 bottom-[-0.5rem]">
+                        {cartItems.length > 0 && (
+                            <span>
+                                <span className="px-1.5 py-0 text-sm text-white bg-pink-600 rounded-full">
+                                    {cartItems.reduce((a, c) => a + c.qty, 0)}
+                                </span>
+                            </span>
+                        )}
+                    </div>
                 </Link>
                 <Link 
                     to='/favorite' 
                     className='flex items-center transition-transform transform hover:translate-x-2'>
-                    <FaHeart className='mr-2 mt-[3rem]' size={26} />
+                    <FaRegHeart className='mr-2 mt-[3rem]' size={26} />
                     <span className='hidden nav-item-name mt-[3rem]'>Favorites</span> {" "}
                     <FavoritesCount />
                 </Link>

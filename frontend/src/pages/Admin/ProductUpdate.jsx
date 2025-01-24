@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { 
     useUpdateProductMutation,
     useDeleteProductMutation,
@@ -23,8 +23,6 @@ const ProductUpdate = () => {
     const [brand, setBrand] = useState(productData?.brand || '');
     const [stock, setStock] = useState(productData?.countInStock || '');
     const [quantity, setQuantity] = useState(productData?.quantity || '');
-
-    const navigate = useNavigate();
 
     const {data: categories = []} = useFetchCategoriesQuery();
     const [uploadProductImage] = useUploadProductImageMutation();
@@ -78,7 +76,7 @@ const ProductUpdate = () => {
                 toast.error(data.error);
             } else {
                 toast.success('Product updated successfully');
-                navigate("/admin/allproductslist", { state: { refresh: true }});
+                window.location.href = "/admin/allproductslist";
             }
           } catch (error) {
                 console.error(error);
@@ -94,7 +92,7 @@ const ProductUpdate = () => {
 
             const {data} = await deleteProduct(params._id);
             toast.success(`${data.name} is deleted successfully`);
-            navigate("/admin/allproductslist", { state: { refresh: true }});
+            window.location.href = "/admin/allproductslist";
         } catch(e) {
             console.log(e);
             toast.error(e?.data?.message || e.error);

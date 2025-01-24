@@ -2,18 +2,10 @@ import { Link, useLocation } from "react-router-dom";
 import moment from "moment";
 import { useAllProductsQuery } from "../../redux/api/productApiSlice";
 import AdminMenu from "./AdminMenu";
-import { useEffect } from "react";
 
 const AllProducts = () => {
   const location = useLocation();
   const { data: products, isLoading, isError, refetch } = useAllProductsQuery();
-
-  useEffect(() => {
-    if (location.state?.refresh) {
-      refetch();
-      window.history.replaceState({}, document.title);
-    }
-  }, [location.state, refetch]);
 
   if (isLoading) {
     return <div>Loading...</div>;

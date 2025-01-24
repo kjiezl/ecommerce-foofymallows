@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useParams, Link, useNavigate } from "react-router"
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { toast } from "react-toastify"
 import { 
     useGetProductDetailsQuery,
@@ -19,6 +19,7 @@ import moment from "moment"
 import HeartIcon from "./HeartIcon"
 import Ratings from "./Ratings"
 import ProductTabs from "./ProductTabs"
+import { addToCart } from "../../redux/features/cart/cartSlice"
 
 const ProductDetails = () => {
     const {id: productId} = useParams();
@@ -33,6 +34,8 @@ const ProductDetails = () => {
     const {userInfo} = useSelector(state => state.auth);
 
     const [createReview, {isLoading: loadingProductReview}] = useCreateReviewMutation();
+
+    const dispatch = useDispatch();
 
     const submitHandler = async (e) => {
         e.preventDefault();
@@ -50,15 +53,20 @@ const ProductDetails = () => {
             toast.error(err?.data || err.message)
         }
     }
+
+    const addToCartHandler = () => {
+        dispatch(addToCart({ ...product, qty}));
+        navigate("/cart");
+    }
     
   return (
     <>
-    <div className="mt-4 ml-[7rem]">
-        <a href="/" className="text-3xl font-semibold text-pink-600 font-varela ">Foofy<span className="text-pink-400">mallows</span></a><br />
-    </div>
+        <div className="mt-4 ml-[7rem]">
+            <a href="/" className="text-3xl font-semibold text-pink-600 font-varela ">Foofy<span className="text-pink-400">mallows</span></a><br />
+        </div>
     <div className="my-5 ml-[20rem]">
         <Link 
-            to='/'
+            to='/shop'
             className="text-[#494949] font-semibold hover:underline hover:text-pink-600">
                 &lt; Go back
         </Link>
@@ -134,7 +142,7 @@ const ProductDetails = () => {
                     </div>
                     <div className="btn-container">
                         <button 
-                            // onClick={addToCartHandler} 
+                            onClick={addToCartHandler} 
                             disabled={product.countInStock === 0} 
                             className="bg-pink-600 text-white py-2 px-4 text-lg rounded-lg mt-4 md:mt-0 hover:scale-110 hover:bg-pink-800 transition-transform">
                                 Add to Cart

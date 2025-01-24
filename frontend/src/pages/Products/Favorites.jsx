@@ -12,7 +12,7 @@ const Favorites = () => {
             <a href="/" className="text-3xl font-semibold text-pink-600 font-varela ">Foofy<span className="text-pink-400">mallows</span></a><br />
         </div>
         <div className="ml-[10rem]">
-            <h1 className="text-4xl my-6 font-varela ml-[3rem] mt-[4rem]">
+            <h1 className="text-4xl my-6 font-varela font-bold ml-[3rem] mt-[4rem]">
                 Favorite Foofies
             </h1>
 
