@@ -30,8 +30,8 @@ const Cart = () => {
       </div>
       <div className="container flex justify-around items-start flex-wrap mx-auto mt-8">
         {cartItems.length === 0 ? (
-          <div>
-            Your cart is empty! <Link to='/shop'>Go to shop</Link>
+          <div className="font-bold text-lg">
+            Your cart is empty! <Link to='/shop' className="hover:underline text-blue-800 hover:text-blue-500">Go to shop</Link>
           </div>) : (
           <>
             <div className="flex flex-col w-[80%]">
@@ -79,7 +79,7 @@ const Cart = () => {
                 <div className="p-4 rounded-lg">
                   <h2 className="text-xl font-semibold mb-2 text-pink-700">
                     Items (
-                      {cartItems.reduce((acc, item) => acc + item.qty, 0)}
+                      {cartItems.reduce((acc, item) => acc + item.qty * 1, 0)}
                     )
                   </h2>
                   <div className="text-2xl font-bold text-pink-700">

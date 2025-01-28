@@ -70,7 +70,7 @@ const Navigation = () => {
                         {cartItems.length > 0 && (
                             <span>
                                 <span className="px-1.5 py-0 text-sm text-white bg-pink-600 rounded-full">
-                                    {cartItems.reduce((a, c) => a + c.qty, 0)}
+                                    {cartItems.reduce((a, c) => a + c.qty * 1, 0)}
                                 </span>
                             </span>
                         )}

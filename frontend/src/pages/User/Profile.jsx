@@ -44,7 +44,7 @@ const Profile = () => {
     <div className="container mx-auto p-4 mt-[10rem]">
         <div className="flex justify-center align-center md:flex md: space-x-4">
             <div className="md:w-1/3">
-                <h2 className="text-2xl font-bold mb-10 text-center">
+                <h2 className="text-3xl font-bold mb-10 text-center">
                     Update Profile
                 </h2>
 
