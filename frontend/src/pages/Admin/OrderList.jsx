@@ -9,9 +9,6 @@ const OrderList = () => {
 
   return (
     <>
-        <div className="mt-4 ml-[7rem]">
-        <a href="/" className="text-3xl font-semibold text-pink-600 font-varela ">Foofy<span className="text-pink-400">mallows</span></a><br />
-        </div>
         <h2 className="ml-[10rem] text-3xl font-bold font-varela my-10">User Orders</h2>
       {isLoading ? (
         <Loader />
