@@ -98,11 +98,17 @@ const Order = () => {
         <a href="/" className="text-3xl font-semibold text-pink-600 font-varela ">Foofy<span className="text-pink-400">mallows</span></a><br />
     </div>
     <div className="mt-10 ml-[8rem]">
+      {userInfo && userInfo.isAdmin ? (
+        <a href="/admin/orderlist" className="text-[#494949] font-semibold hover:underline hover:text-pink-600">
+          &lt; Back
+        </a>
+      ) : (
         <Link 
             to='/user-orders'
             className="text-[#494949] font-semibold hover:underline hover:text-pink-600">
                 &lt; Back
         </Link>
+      )}
     </div>
     <div className="container flex flex-col ml-[10rem] md:flex-row mt-5">
       <div className="md:w-2/3 pr-4">
